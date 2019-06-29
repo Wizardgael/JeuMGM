@@ -151,6 +151,22 @@
             }
         },
         {
+            "Key": "4547278e-6cf3-4e91-9f3d-044e803675fc",
+            "Value": {
+                "id": "415e9475-d24f-4d37-b71d-fd61fe793f16",
+                "resourcePath": "objects\\oBlock\\oBlock.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4580b9ba-9467-4726-aa4c-1ded0273cfef",
+            "Value": {
+                "id": "fcb9d5f2-b93e-4e31-b44e-51f9b2caa694",
+                "resourcePath": "objects\\oParentBlock\\oParentBlock.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4a8e6b79-523c-41cc-8e9b-20d4d4c3c6b2",
             "Value": {
                 "id": "dc9ea5d9-7537-4fee-8109-e3ea062ccd7e",
@@ -215,11 +231,27 @@
             }
         },
         {
+            "Key": "6666df15-b28f-4c09-a430-a7a99aa855ab",
+            "Value": {
+                "id": "ad189f33-910e-4054-8a45-9e7e8e583905",
+                "resourcePath": "sprites\\sBlock\\sBlock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "70c79ad6-44ef-4472-917a-88a1f5ca052f",
             "Value": {
                 "id": "63f2114f-f1f4-43fe-b8c6-6843a19d115d",
                 "resourcePath": "views\\70c79ad6-44ef-4472-917a-88a1f5ca052f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "76089718-6862-436f-aa6d-269d0c3ab512",
+            "Value": {
+                "id": "e05be7ce-d87f-4bdb-b88e-7f391feee925",
+                "resourcePath": "fonts\\fontNom\\fontNom.yy",
+                "resourceType": "GMFont"
             }
         },
         {

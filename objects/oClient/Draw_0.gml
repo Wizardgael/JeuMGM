@@ -4,6 +4,14 @@
 x = clientx;
 y = clienty;
 
+//var view = view_camera[0];
+//var camW = camera_get_view_width(view);
+//var camH = camera_get_view_height(view);
+//var newX = clamp(x - (camW/2), 0, room_width);
+//var newY = clamp(y - (camH/2), 0, room_height);
+//camera_set_view_pos(view, newX, newY);
+
+
 var index = 0;
 var xx, yy, sp, spindex, col, rot;
 
@@ -16,6 +24,13 @@ for(var i = 0; i < sprites; i++){
 	col = allSprite[| index++];
 	rot = allSprite[| index++];
 	name = allSprite[| index++];
+	
+	//draw_set_color(c_black);
+	//draw_rectangle(x - 32, y - 50, x + 32, y - 34, false);
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_set_font(fontNom);
+	draw_text(x, y - 45, name);
 	
 	draw_sprite_ext(sp, spindex, xx, yy, 1,1,rot, col,1);
 }
