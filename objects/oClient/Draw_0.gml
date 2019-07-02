@@ -30,7 +30,7 @@ for(var i = 0; i < sprites; i++){
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_font(fontNom);
-	draw_text(x, y - 45, name);
+	draw_text(xx, yy - 45, name);
 	
 	draw_sprite_ext(sp, spindex, xx, yy, 1,1,rot, col,1);
 }

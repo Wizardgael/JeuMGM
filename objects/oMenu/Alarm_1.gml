@@ -8,6 +8,6 @@ if(global.haveServer == false){
 }else{
 	
 	global.ip = "127.0.0.1";
-	room_goto(Game);
+	room_goto(ChoicePerso);
 
 }

@@ -2,4 +2,4 @@
 
 global.serverName = oTextBox.text;
 
-room_goto(Game);
+room_goto(ChoicePerso);

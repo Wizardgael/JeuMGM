@@ -11,3 +11,5 @@
 #macro NAME_CMD 1
 #macro PING_CMD 2
 
+#macro IS_KNIGHT 0
+#macro IS_WIZARD 1

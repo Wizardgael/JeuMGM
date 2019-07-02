@@ -28,7 +28,22 @@ if(cmd == KEY_CMD){
 }else if(cmd == KEY_ROT){
 	inst.image_angle = buffer_read(buff, buffer_s16);
 }else if(cmd == NAME_CMD){
+	
+	var c = buffer_read(buff, buffer_s16);
+	
+	if(c == IS_KNIGHT){
+		c = oKnight;
+	}else if(c == IS_WIZARD){
+		c = oWizard;
+	}
+	var temp = instance_create_layer(inst.x, inst.y, inst.layer, c);
+	temp.image_blend = inst.image_blend;
+	clients[? sock] = temp;
+	
+	instance_destroy(inst);
+	inst = clients[? sock];
 	inst.name = buffer_read(buff, buffer_string);
+	
 }else if(cmd == PING_CMD){
 	
 }

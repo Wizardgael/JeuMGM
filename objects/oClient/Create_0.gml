@@ -21,6 +21,5 @@ if(err != 0){
 	game_restart();
 	
 }
-
 sendName(name);
 alarm[0] = room_speed * 2;
