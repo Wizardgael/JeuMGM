@@ -14,7 +14,8 @@ global.NetworkState = NETWORK_PLAY;
 
 allSprite = ds_list_create();
 sprites = 0;
-var err = network_connect(client, global.ip, 8000);
+var err = network_connect(client, global.ip, 12975);
+
 if(err != 0){
 	
 	show_message("Erreur de connection");

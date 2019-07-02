@@ -18,7 +18,7 @@ playerBuffer = buffer_create(16384, buffer_fixed, 1);
 clients = ds_map_create();
 socketList = ds_list_create();
 
-server = network_create_server(global.serverType, 8000, 32);
+server = network_create_server(global.serverType, 12975, 6);
 
 if(server < 0){
 	
