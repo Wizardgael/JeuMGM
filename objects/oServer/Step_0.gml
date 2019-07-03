@@ -33,6 +33,7 @@ if(count > 0){
 		buffer_seek(playerBuffer, buffer_seek_start, 4);
 		
 		var inst = ds_map_find_value(clients, sock);
+		
 		buffer_write(global.playerBuffer, buffer_s16, inst.x);
 		buffer_write(global.playerBuffer, buffer_s16, inst.y);
 		

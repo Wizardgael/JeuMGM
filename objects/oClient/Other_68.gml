@@ -14,6 +14,7 @@ if(client == eventid){
 		clienty = buffer_read(buff,buffer_s16);     //y
 		
 		ds_list_clear(allSprite);
+		
 		for(var i = 0; i < sprites; i++){
 			var type = buffer_read(buff, buffer_s16);
 			ds_list_add(allSprite, type);

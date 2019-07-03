@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 name = "";
+idPlayer = 0;
 
 global.playerTotal++;
 
