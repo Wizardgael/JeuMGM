@@ -15,6 +15,7 @@ if(t == network_type_connect){
 	//create a new player and pick a random color
 	var inst = instance_create_layer(100,100, "Instances", oPlayer);
 	inst.image_blend = color[colorIndex];
+	inst.sock = sock;
 	colorIndex++;
 	
 	clients[? sock] = inst;

@@ -21,6 +21,9 @@ for(var i = 0; i < sprites; i++){
 	if(type == OBJ_PLAYER){
 		// SI JOUEUR
 		var color = c_white;
+		if(allSprite[| index++] == 1){
+			color = c_red;	
+		}
 
 		xx = allSprite[| index++];
 		yy = allSprite[| index++];

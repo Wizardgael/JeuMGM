@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 name = "";
-idPlayer = 0;
+sock = -1;
 
 global.playerTotal++;
 

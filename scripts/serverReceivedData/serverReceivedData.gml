@@ -38,6 +38,7 @@ if(cmd == KEY_CMD){
 	}
 	var temp = instance_create_layer(inst.x, inst.y, inst.layer, c);
 	temp.image_blend = inst.image_blend;
+	temp.sock = inst.sock;
 	clients[? sock] = temp;
 	
 	instance_destroy(inst);
