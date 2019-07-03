@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if(keys[RIGHT_KEY] && !place_meeting(x + spd, y, oParentBlock)){
-	x += spd;	
+	x += spd;
 }
 
 if(keys[LEFT_KEY] && !place_meeting(x - spd, y, oParentBlock)){

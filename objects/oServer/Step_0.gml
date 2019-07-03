@@ -15,6 +15,7 @@ if(count > 0){
 	buffer_write(global.playerBuffer, buffer_s16, 0);
 	
 	with(oPlayer){
+		buffer_write(global.playerBuffer, buffer_s16, OBJ_PLAYER);
 		buffer_write(global.playerBuffer, buffer_s16, x);
 	    buffer_write(global.playerBuffer, buffer_s16, y);
 	    buffer_write(global.playerBuffer, buffer_s16, sprite_index);

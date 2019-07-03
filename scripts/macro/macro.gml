@@ -13,3 +13,8 @@
 
 #macro IS_KNIGHT 0
 #macro IS_WIZARD 1
+
+#macro OBJ_PLAYER 0
+#macro OBJ_MONSTER 1
+#macro OBJ_SPELL 2
+#macro OBJ_ITEM 3
