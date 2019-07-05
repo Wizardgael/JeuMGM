@@ -9,12 +9,33 @@ if(count > 0){
 	
 	buffer_seek(playerBuffer, buffer_seek_start, 0);
 	
-	buffer_write(playerBuffer, buffer_u32, global.playerTotal);//nb de sprite
+	var nbInst = global.playerTotal + instance_number(oItem);
+	
+	
+	buffer_write(playerBuffer, buffer_s16, CLIENT_STEP_SHOW);
+	buffer_write(playerBuffer, buffer_u32, nbInst);//nb de sprite
 	
 	buffer_write(playerBuffer, buffer_s16, 0);
 	buffer_write(playerBuffer, buffer_s16, 0);
 	buffer_write(playerBuffer, buffer_s16, 0);
 	
+	//SEND ITEM
+	for(var j = 0; j < instance_number(oItem); j++){
+		var temp = instance_find(oItem, j);
+		
+		buffer_write(global.playerBuffer, buffer_s16, OBJ_ITEM);
+		buffer_write(global.playerBuffer, buffer_s16, temp.x);
+	    buffer_write(global.playerBuffer, buffer_s16, temp.y);
+	    buffer_write(global.playerBuffer, buffer_s16, temp.sprite_index);
+	    buffer_write(global.playerBuffer, buffer_s16, temp.image_index);
+		buffer_write(global.playerBuffer, buffer_s16, temp.dir);
+	    buffer_write(global.playerBuffer, buffer_string, temp.name);
+		buffer_write(global.playerBuffer, buffer_s16, temp.rank);
+		buffer_write(global.playerBuffer, buffer_s16, temp.dmg);
+		
+	}
+	
+	//SEND PLAYER
 	for(var j = 0; j < instance_number(oPlayer); j++){
 		var temp = instance_find(oPlayer, j);
 		
@@ -34,7 +55,7 @@ if(count > 0){
 	for(var i = 0; i < count; i++){
 		var sock = socketList[| i];
 		
-		buffer_seek(playerBuffer, buffer_seek_start, 4);
+		buffer_seek(playerBuffer, buffer_seek_start, 6);
 		
 		var inst = ds_map_find_value(clients, sock);
 		

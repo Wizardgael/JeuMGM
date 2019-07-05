@@ -20,6 +20,8 @@ if(cmd == KEY_CMD){
 		case ord("S") : key = DOWN_KEY;break;
 		case ord("Q") : key = LEFT_KEY;break;
 		case ord("D") : key = RIGHT_KEY;break;
+		case ord("E") : key = KEY_INTERACT;break;
+		case ord("A") : key = KEY_SPELL1;break;
 	}
 	
 	if(state == 0) inst.keys[key] = false;
@@ -44,6 +46,31 @@ if(cmd == KEY_CMD){
 	instance_destroy(inst);
 	inst = clients[? sock];
 	inst.name = buffer_read(buff, buffer_string);
+	
+}else if(cmd == KEY_MOUSE){
+	var xx = buffer_read(buff, buffer_s16);
+	var yy = buffer_read(buff, buffer_s16);
+	if(position_meeting(xx, yy, oItem)){
+		var o = instance_nearest(xx, yy, oItem);
+		var b = buffer_create(32, buffer_grow, 1);
+		buffer_seek(b, buffer_seek_start, 0);
+		buffer_write(b, buffer_s16, CLIENT_ITEM_SHOW);
+		buffer_write(b, buffer_s16,0);
+		buffer_write(b, buffer_string, o.name);
+		buffer_write(b, buffer_s16, o.x);
+		buffer_write(b, buffer_s16, o.y);
+		buffer_write(b, buffer_s16, o.rank);
+		buffer_write(b, buffer_s16, o.dmg);
+		buffer_write(b, buffer_string, o.desc);
+		network_send_packet(sock, b, buffer_tell(b));
+	}else{
+		var b = buffer_create(32, buffer_fixed, 1);
+		buffer_seek(b, buffer_seek_start, 0);
+		buffer_write(b, buffer_s16, CLIENT_ITEM_SHOW);
+		buffer_write(b, buffer_s16, 1);
+		network_send_packet(sock, b, buffer_tell(b));
+	}
+	
 	
 }else if(cmd == PING_CMD){
 	

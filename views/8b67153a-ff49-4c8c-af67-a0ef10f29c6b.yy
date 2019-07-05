@@ -9,7 +9,8 @@
         "43234c63-21a0-44c6-8952-9937375adac2",
         "04733e0d-3d5f-4119-a4c4-5db8f5220edb",
         "2863e62e-926d-44d1-b10b-5077bcdf4735",
-        "7610eede-1c4b-4db9-be5c-11bd88d299f8"
+        "7610eede-1c4b-4db9-be5c-11bd88d299f8",
+        "d8b73ef2-6318-4cad-abf6-528bf0534af6"
     ],
     "filterType": "GMScript",
     "folderName": "network",

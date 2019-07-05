@@ -24,3 +24,11 @@ if(err != 0){
 }
 sendName(name);
 alarm[0] = room_speed * 2;
+
+showItem = false;
+itemName = "";
+itemDmg = -1;
+itemRank = -1;
+itemDesc = "";
+itemX = 0;
+itemY = 0;

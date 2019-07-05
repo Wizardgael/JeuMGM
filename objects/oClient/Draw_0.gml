@@ -16,6 +16,7 @@ var index = 0;
 var xx, yy, sp, spindex, col, rot;
 
 for(var i = 0; i < sprites; i++){
+	
 	var type = allSprite[| index++];
 	
 	if(type == OBJ_PLAYER){
@@ -41,7 +42,20 @@ for(var i = 0; i < sprites; i++){
 		draw_text(xx, yy - 45, name);
 		draw_sprite_ext(sp, spindex, xx, yy, 1,1,rot, col,1);
 		draw_set_color(c_white);
-	}	
+		
+	}else if(type == OBJ_ITEM){
+		
+		xx = allSprite[| index++];
+		yy = allSprite[| index++];
+		sp = allSprite[| index++];
+		spindex = allSprite[| index++];
+		dir = allSprite[| index++];
+		name = allSprite[| index++];
+		rank = allSprite[| index++];
+		dmg = allSprite[| index++];
+		
+		draw_sprite_ext(sp, spindex, xx, yy + dir, 1,1,0, c_white,1);
+	}
 	
 	
 }

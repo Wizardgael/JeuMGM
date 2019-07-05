@@ -6,7 +6,7 @@ sock = -1;
 
 global.playerTotal++;
 
-for(var i = 0; i < 4; i++;)
+for(var i = 0; i < 6; i++;)
 {
 	keys[i] = false;
 }
