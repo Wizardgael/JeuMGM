@@ -16,6 +16,9 @@ if(t == network_type_connect){
 	var inst = instance_create_layer(100,100, "Instances", oPlayer);
 	inst.image_blend = color[colorIndex];
 	inst.sock = sock;
+	inst.hp = -1;
+	inst.maxHp = -1;
+	initPlayer(inst);
 	colorIndex++;
 	
 	clients[? sock] = inst;

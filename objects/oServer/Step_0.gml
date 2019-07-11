@@ -22,9 +22,9 @@ if(count > 0){
 	buffer_write(playerBuffer, buffer_s16, CLIENT_STEP_SHOW);
 	buffer_write(playerBuffer, buffer_u32, nbInst);//nb de sprite
 	
-	buffer_write(playerBuffer, buffer_s16, 0);
-	buffer_write(playerBuffer, buffer_s16, 0);
-	buffer_write(playerBuffer, buffer_s16, 0);
+	buffer_write(playerBuffer, buffer_s16, 0);//posX
+	buffer_write(playerBuffer, buffer_s16, 0);//posY
+	buffer_write(playerBuffer, buffer_s16, 0);//index du joueur
 	
 	//SEND ITEM
 	for(var j = 0; j < instance_number(oItem); j++){
@@ -47,6 +47,7 @@ if(count > 0){
 		var temp = instance_find(oPlayer, j);
 		
 		buffer_write(global.playerBuffer, buffer_s16, OBJ_PLAYER);
+		
 		buffer_write(global.playerBuffer, buffer_s16, temp.x);
 	    buffer_write(global.playerBuffer, buffer_s16, temp.y);
 	    buffer_write(global.playerBuffer, buffer_s16, temp.sprite_index);
@@ -96,14 +97,14 @@ if(count > 0){
 		buffer_write(playerBuffer, buffer_s16, inst.x);
 		buffer_write(playerBuffer, buffer_s16, inst.y);
 		
-		var c = 0;
+		var index = 0;
 		for(var j = 0; j < instance_number(oPlayer); j++){
 			var temp = instance_find(oPlayer, j);
 			if(temp.sock == sock){
-				c = j;	
+				index = j;	
 			}
 		}
-		buffer_write(playerBuffer, buffer_s16, c);
+		buffer_write(playerBuffer, buffer_s16, index);
 		
 		network_send_packet(sock, playerBuffer, buffer_size);
 	}

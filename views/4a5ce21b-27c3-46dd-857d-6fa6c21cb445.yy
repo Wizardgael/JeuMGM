@@ -7,7 +7,8 @@
         "5c809ce3-c6d9-4c5f-acb9-5edee3f6edb3",
         "3b5e4d2c-db73-455f-8e1a-c898e320fe3e",
         "2b7faa2f-6174-4962-964b-de9cec7b82b9",
-        "cced1c20-6a1f-4c8c-ae18-837ca9239662"
+        "cced1c20-6a1f-4c8c-ae18-837ca9239662",
+        "794194f5-9a1b-4c19-b92c-a1ad6e314110"
     ],
     "filterType": "GMScript",
     "folderName": "Game",

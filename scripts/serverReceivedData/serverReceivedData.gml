@@ -42,9 +42,16 @@ if(cmd == KEY_CMD){
 	}else if(c == IS_WIZARD){
 		c = oWizard;
 	}
+	
 	var temp = instance_create_layer(inst.x, inst.y, inst.layer, c);
 	temp.image_blend = inst.image_blend;
 	temp.sock = inst.sock;
+	temp.invArme = inst.invArme;
+	temp.invCasque = inst.invCasque;
+	temp.invPlastron = inst.invPlastron;
+	temp.invBotte = inst.invBotte;
+	temp.hp = inst.hp;
+	temp.maxHp = inst.maxHp;
 	clients[? sock] = temp;
 	
 	instance_destroy(inst);

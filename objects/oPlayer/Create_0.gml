@@ -19,5 +19,6 @@ invPlastron = ds_map_create();
 invBotte = ds_map_create();
 
 hp = -1;
+maxHp = -1;
 clientMouseX = -1;
 clientMouseY = -1;
