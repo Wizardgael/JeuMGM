@@ -12,3 +12,12 @@ for(var i = 0; i < 6; i++;)
 }
 
 spd = 5;
+
+invArme = ds_map_create();
+invCasque = ds_map_create();
+invPlastron = ds_map_create();
+invBotte = ds_map_create();
+
+hp = -1;
+clientMouseX = -1;
+clientMouseY = -1;

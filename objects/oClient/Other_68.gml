@@ -21,14 +21,15 @@ if(client == eventid){
 			ds_list_clear(allSprite);
 		
 			var nbPlayer = 0;
-		
 			for(var i = 0; i < sprites; i++){
 				var type = buffer_read(buff, buffer_s16);
 				ds_list_add(allSprite, type);
 			
 				if(type == OBJ_PLAYER){
+					var isPlayer = false;
 					if(nbPlayer == index){
 						ds_list_add(allSprite, 1);
+						isPlayer = true;
 					}else{
 						ds_list_add(allSprite, 0);
 					}
@@ -39,6 +40,59 @@ if(client == eventid){
 					ds_list_add(allSprite, buffer_read(buff, buffer_s32));//image_blend
 					ds_list_add(allSprite, buffer_read(buff, buffer_s32));//image_angle
 					ds_list_add(allSprite, buffer_read(buff, buffer_string));//playerName
+					if(isPlayer){
+						hp = buffer_read(buff, buffer_s16);
+						maxHp = buffer_read(buff, buffer_s16);
+						weapon[? "name"] =  buffer_read(buff, buffer_string);//Weapon Name
+						weapon[? "sprite"] =  buffer_read(buff, buffer_s16);//Weapon Name
+						weapon[? "rank"] = buffer_read(buff, buffer_s16);//Weapon Rank
+						weapon[? "stat"] = buffer_read(buff, buffer_s16);//Weapon dmg
+						weapon[? "desc"] = buffer_read(buff, buffer_string);//Weapon desc
+						
+						helmet[? "name"] =  buffer_read(buff, buffer_string);//Weapon Name
+						helmet[? "sprite"] =  buffer_read(buff, buffer_s16);//Weapon Name
+						helmet[? "rank"] = buffer_read(buff, buffer_s16);//Weapon Rank
+						helmet[? "stat"] = buffer_read(buff, buffer_s16);//Weapon dmg
+						helmet[? "desc"] = buffer_read(buff, buffer_string);//Weapon desc
+						
+						chestplate[? "name"] =  buffer_read(buff, buffer_string);//Weapon Name
+						chestplate[? "sprite"] =  buffer_read(buff, buffer_s16);//Weapon Name
+						chestplate[? "rank"] = buffer_read(buff, buffer_s16);//Weapon Rank
+						chestplate[? "stat"] = buffer_read(buff, buffer_s16);//Weapon dmg
+						chestplate[? "desc"] = buffer_read(buff, buffer_string);//Weapon desc
+						
+						boots[? "name"] =  buffer_read(buff, buffer_string);//Weapon Name
+						boots[? "sprite"] =  buffer_read(buff, buffer_s16);//Weapon Name
+						boots[? "rank"] = buffer_read(buff, buffer_s16);//Weapon Rank
+						boots[? "stat"] = buffer_read(buff, buffer_s16);//Weapon dmg
+						boots[? "desc"] = buffer_read(buff, buffer_string);//Weapon desc
+						
+						//
+					}else{
+						buffer_read(buff, buffer_s16);
+						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);//Weapon Rank
+						buffer_read(buff, buffer_s16);//Weapon dmg
+						buffer_read(buff, buffer_string);//Weapon desc
+						
+						buffer_read(buff, buffer_s16);
+						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);//Weapon Rank
+						buffer_read(buff, buffer_s16);//Weapon dmg
+						buffer_read(buff, buffer_string);//Weapon desc
+						
+						buffer_read(buff, buffer_s16);
+						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);//Weapon Rank
+						buffer_read(buff, buffer_s16);//Weapon dmg
+						buffer_read(buff, buffer_string);//Weapon desc
+						
+						buffer_read(buff, buffer_s16);
+						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);//Weapon Rank
+						buffer_read(buff, buffer_s16);//Weapon dmg
+						buffer_read(buff, buffer_string);//Weapon desc
+					}
 					nbPlayer++;
 				}else if(type == OBJ_ITEM){
 					ds_list_add(allSprite, buffer_read(buff, buffer_s16));//x
@@ -59,6 +113,7 @@ if(client == eventid){
 			
 			if(itemNull == 0){
 				itemName = buffer_read(buff, buffer_string);
+				itemType = buffer_read(buff, buffer_s16);
 				itemX = buffer_read(buff, buffer_s16);
 				itemY = buffer_read(buff, buffer_s16);
 				itemRank = buffer_read(buff, buffer_s16);

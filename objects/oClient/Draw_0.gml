@@ -75,7 +75,11 @@ if(showItem){
 	draw_set_font(fontItem);
 	draw_set_halign(fa_left);
 	draw_text(xx - 120, yy - 78, itemName);
-	draw_text(xx + 60, yy - 78, "dmg - "+string(itemDmg));
+	if(itemType == ITEM_TYPE_SWORD){
+		draw_text(xx + 60, yy - 78, "dmg - "+string(itemDmg));
+	}else{
+		draw_text(xx + 60, yy - 78, "def - "+string(itemDmg));
+	}
 	draw_set_font(fontItemDesc)
 	draw_text(xx - 120, yy - 47, itemDesc);
 }

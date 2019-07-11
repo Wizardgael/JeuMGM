@@ -40,7 +40,7 @@ if(keyboard_check_released(ord("D"))){
 
 //========================================================================
 if(keyboard_check_released(ord("E"))){
-	sendKey(ord("E"), 1);
+	sendKeyInteract(ord("E"), 1);
 }
 
 if(keyboard_check_released(ord("A"))){

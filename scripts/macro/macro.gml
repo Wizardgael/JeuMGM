@@ -13,6 +13,7 @@
 
 
 #macro KEY_CMD 0
+#macro KEY_CMD_INTERACT 5
 #macro KEY_ROT 3
 #macro KEY_MOUSE 4
 #macro NAME_CMD 1
@@ -34,3 +35,8 @@
 
 #macro CLIENT_ITEM_SHOW 0
 #macro CLIENT_STEP_SHOW 1
+
+#macro ITEM_TYPE_SWORD 0
+#macro ITEM_TYPE_HELMET 1
+#macro ITEM_TYPE_CHESTPLATE 2
+#macro ITEM_TYPE_BOOT 3
