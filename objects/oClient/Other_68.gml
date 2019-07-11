@@ -21,18 +21,21 @@ if(client == eventid){
 			ds_list_clear(allSprite);
 		
 			var nbPlayer = 0;
+			
 			for(var i = 0; i < sprites; i++){
 				var type = buffer_read(buff, buffer_s16);
 				ds_list_add(allSprite, type);
 			
 				if(type == OBJ_PLAYER){
 					var isPlayer = false;
+					
 					if(nbPlayer == index){
 						ds_list_add(allSprite, 1);
 						isPlayer = true;
 					}else{
 						ds_list_add(allSprite, 0);
 					}
+					
 					ds_list_add(allSprite, buffer_read(buff, buffer_s16));//x
 					ds_list_add(allSprite, buffer_read(buff, buffer_s16));//y	
 					ds_list_add(allSprite, buffer_read(buff, buffer_s16));//sprite_index	
@@ -40,11 +43,14 @@ if(client == eventid){
 					ds_list_add(allSprite, buffer_read(buff, buffer_s32));//image_blend
 					ds_list_add(allSprite, buffer_read(buff, buffer_s32));//image_angle
 					ds_list_add(allSprite, buffer_read(buff, buffer_string));//playerName
+					
 					if(isPlayer){
+						
 						hp = buffer_read(buff, buffer_s16);
 						maxHp = buffer_read(buff, buffer_s16);
+						
 						weapon[? "name"] =  buffer_read(buff, buffer_string);//Weapon Name
-						weapon[? "sprite"] =  buffer_read(buff, buffer_s16);//Weapon Name
+						weapon[? "sprite"] =  buffer_read(buff, buffer_s16);//Weapon sprite
 						weapon[? "rank"] = buffer_read(buff, buffer_s16);//Weapon Rank
 						weapon[? "stat"] = buffer_read(buff, buffer_s16);//Weapon dmg
 						weapon[? "desc"] = buffer_read(buff, buffer_string);//Weapon desc
@@ -70,25 +76,28 @@ if(client == eventid){
 						//
 					}else{
 						buffer_read(buff, buffer_s16);
+						buffer_read(buff, buffer_s16);
+						
 						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_s16);//Weapon Rank
 						buffer_read(buff, buffer_s16);//Weapon dmg
 						buffer_read(buff, buffer_string);//Weapon desc
 						
-						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_s16);//Weapon Rank
 						buffer_read(buff, buffer_s16);//Weapon dmg
 						buffer_read(buff, buffer_string);//Weapon desc
 						
-						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_s16);//Weapon Rank
 						buffer_read(buff, buffer_s16);//Weapon dmg
 						buffer_read(buff, buffer_string);//Weapon desc
 						
-						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_string);//Weapon Name
+						buffer_read(buff, buffer_s16);
 						buffer_read(buff, buffer_s16);//Weapon Rank
 						buffer_read(buff, buffer_s16);//Weapon dmg
 						buffer_read(buff, buffer_string);//Weapon desc
