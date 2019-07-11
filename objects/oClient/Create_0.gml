@@ -24,3 +24,19 @@ if(err != 0){
 }
 sendName(name);
 alarm[0] = room_speed * 2;
+
+showItem = false;
+itemType = -1;
+itemName = "";
+itemDmg = -1;
+itemRank = -1;
+itemDesc = "";
+itemX = 0;
+itemY = 0;
+
+hp = -1;
+maxHp = -1;
+weapon = ds_map_create();
+helmet = ds_map_create();
+chestplate = ds_map_create();
+boots = ds_map_create();

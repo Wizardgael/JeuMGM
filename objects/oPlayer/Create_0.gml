@@ -6,9 +6,18 @@ sock = -1;
 
 global.playerTotal++;
 
-for(var i = 0; i < 4; i++;)
+for(var i = 0; i < 6; i++;)
 {
 	keys[i] = false;
 }
 
 spd = 5;
+
+invArme = ds_map_create();
+invCasque = ds_map_create();
+invPlastron = ds_map_create();
+invBotte = ds_map_create();
+
+hp = -1;
+clientMouseX = -1;
+clientMouseY = -1;

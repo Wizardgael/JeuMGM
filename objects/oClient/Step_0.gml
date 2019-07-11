@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 sendRot();
+sendMousePos();
 
 if(keyboard_check_pressed(ord("Z"))){
 	sendKey(ord("Z"), 1);
@@ -35,4 +36,13 @@ if(keyboard_check_released(ord("S"))){
 
 if(keyboard_check_released(ord("D"))){
 	sendKey(ord("D"), 0);
+}
+
+//========================================================================
+if(keyboard_check_released(ord("E"))){
+	sendKeyInteract(ord("E"), 1);
+}
+
+if(keyboard_check_released(ord("A"))){
+	sendKey(ord("A"), 1);
 }
