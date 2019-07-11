@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "9ceebcdc-e2df-4869-ad0c-c665396813e4",
+            "Value": {
+                "id": "2399c02a-63f4-4abe-a0a8-9703c23d6cad",
+                "resourcePath": "views\\9ceebcdc-e2df-4869-ad0c-c665396813e4.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a2bbbd02-21ca-4c76-b1ec-41ca30003030",
             "Value": {
                 "id": "b08a3c4f-a1d5-4a15-be78-dc10b6a26280",
@@ -428,6 +436,14 @@
                 "id": "0d4c10fc-bbd8-46d4-8444-60afdf473991",
                 "resourcePath": "views\\b285ee5f-0c2d-4e40-bb21-b66e433b98d0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b393d54e-5202-4d8d-9737-f2840a6faba7",
+            "Value": {
+                "id": "538e9054-4286-465c-ae83-45246a9156a3",
+                "resourcePath": "sprites\\sMonstreTEST\\sMonstreTEST.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -540,6 +556,14 @@
                 "id": "b2fa9efb-f98c-4ec2-929a-1b566a7bf9ab",
                 "resourcePath": "sprites\\buttonJoinServ\\buttonJoinServ.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e1419592-8079-44be-8a5a-3d41d316bfcf",
+            "Value": {
+                "id": "a906660d-6838-4b42-a28b-5c55bb41159d",
+                "resourcePath": "objects\\oMonstreTEST\\oMonstreTEST.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -17,7 +17,8 @@ if(count > 0){
 	
 	for(var j = 0; j < instance_number(oPlayer); j++){
 		var temp = instance_find(oPlayer, j);
-		
+		//ehrierbjefbqdskofdkjnfdijdfjgjqrgjebfgioergjdfgjdfgniodfghjerfdiognefogdfiughiufghfidughndfjjihhigndfngnioreghoeirgjfkjgjefihersoimgsrtgijersdoirtsgjhoiserhkrjtjotnsrtohjdfoihjdfoisogjhiuerhgoierhg
+		//jfiozefhiesfdsjbdfgdriueihduihdfiudhjioefjrieugdlkkfuerhgoidfhijiofghjsodghjgbzrpogfodfiop
 		buffer_write(global.playerBuffer, buffer_s16, OBJ_PLAYER);
 		buffer_write(global.playerBuffer, buffer_s16, temp.x);
 	    buffer_write(global.playerBuffer, buffer_s16, temp.y);
@@ -27,7 +28,8 @@ if(count > 0){
 		buffer_write(global.playerBuffer, buffer_s32, temp.image_angle);
 	    buffer_write(global.playerBuffer, buffer_string, temp.name);	
 		
-	}
+	}//ozierjzdfhdfijdoigrgidfjihfgozejijio
+	//zegjdzohfgojsdiogoejgorengoijgohirghfoighiush
 	
 	var buffer_size = buffer_tell(playerBuffer);
 	
