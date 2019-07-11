@@ -19,6 +19,7 @@ if(count > 0){
 		var temp = instance_find(oPlayer, j);
 		//ehrierbjefbqdskofdkjnfdijdfjgjqrgjebfgioergjdfgjdfgniodfghjerfdiognefogdfiughiufghfidughndfjjihhigndfngnioreghoeirgjfkjgjefihersoimgsrtgijersdoirtsgjhoiserhkrjtjotnsrtohjdfoihjdfoisogjhiuerhgoierhg
 		//jfiozefhiesfdsjbdfgdriueihduihdfiudhjioefjrieugdlkkfuerhgoidfhijiofghjsodghjgbzrpogfodfiop
+		//zzezfeffkdskjbsejbhjfedigeriuwdfiughdfkgdfiugsgkjfgidgiejfoierbgiuerjiludrgqeriqerghigdjgfig
 		buffer_write(global.playerBuffer, buffer_s16, OBJ_PLAYER);
 		buffer_write(global.playerBuffer, buffer_s16, temp.x);
 	    buffer_write(global.playerBuffer, buffer_s16, temp.y);
