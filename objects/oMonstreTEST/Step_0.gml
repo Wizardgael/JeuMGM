@@ -1,31 +1,26 @@
 /// @description Insérez la description ici
 // Vous pouvez écrire votre code dans cet éditeur
+var instPlayer = instance_nearest(x,y,oPlayer);
 
-if ( (x - oPlayer.x < 2 || oPlayer.x - x  < 2) && (y - oPlayer.y < 2 || oPlayer.y - y  < 2) ) 
+if ( 
+	( 
+		(0 < instPlayer.x - x && instPlayer.x - x < 250) 
+		|| (0 < x - instPlayer.x && x - instPlayer.x < 250)
+	) 
+	&& 
+	( 
+		( 0 < instPlayer.y - y && instPlayer.y - y < 250 ) 
+		|| ( 0 < y - instPlayer.y && y - instPlayer.y < 250  ) 
+	) 
+   )
 {
-
-	
-x += spd;
+	move_towards_point(oPlayer.x, oPlayer.y, spd);
 }
-
-
-/*
-if (retour == 0){
-	if(!place_meeting(x + spd, y, oParentBlock))
-	{
-		x += spd;
-	}
-	else
-	{ retour =1;}
-	
-} 
 else 
 {
-	if(!place_meeting(x - spd, y, oParentBlock))
+	if(x != xstart && y != ystart)
 	{
-		x -= spd;
+		move_towards_point(xstart, ystart, spd);	
 	}
-	else
-	{ retour =0;}
+
 }
-*/
